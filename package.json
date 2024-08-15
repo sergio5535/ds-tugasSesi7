@@ -1,0 +1,31 @@
+{
+  "name": "ds-tugassesi7",
+  "version": "1.0.0",
+  "description": "Tugas Sesi 7 API Automation Test",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergio5535/ds-tugasSesi7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergio5535/ds-tugasSesi7/issues"
+  },
+  "homepage": "https://github.com/sergio5535/ds-tugasSesi7#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-json-schema": "^1.5.1",
+    "json-schema-test": "^2.0.0",
+    "mocha": "^10.7.3",
+    "mochawesome": "^7.1.3",
+    "supertest": "^7.0.0"
+  }
+}
