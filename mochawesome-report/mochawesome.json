@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-15T06:03:18.402Z",
+    "end": "2024-08-15T06:03:20.195Z",
+    "duration": 1793,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0cf4b69b-7e2d-417f-a3c5-5916dd438db4",
+      "title": "",
+      "fullFile": "H:\\git\\ds-tugasSesi7\\test\\test-tugas.js",
+      "file": "\\test\\test-tugas.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "10a41b91-52b2-4d6d-b51b-32ed8c1e3150",
+          "title": "API Test for \"reqres.in\"",
+          "fullFile": "H:\\git\\ds-tugasSesi7\\test\\test-tugas.js",
+          "file": "\\test\\test-tugas.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test - GET Single Users",
+              "fullTitle": "API Test for \"reqres.in\" Test - GET Single Users",
+              "timedOut": false,
+              "duration": 485,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(BASE_URL)\n    .get(\"users/2\")\n// assertion\nassert.equal(response.statusCode, 200)\nassert.equal(response.body.data.id, '2')\nassert.equal(response.body.data.email, 'janet.weaver@reqres.in')\n// json schema\nconst schemaPathGet = \"resources/get-object-schema.json\";\nconst jsonSchemaGet = JSON.parse(fs.readFileSync(schemaPathGet, 'utf8'))\nassert.jsonSchema(response.body, jsonSchemaGet);",
+              "err": {},
+              "uuid": "4d6416e6-5b4d-4e6b-ab15-dfcb19abb0f2",
+              "parentUUID": "10a41b91-52b2-4d6d-b51b-32ed8c1e3150",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test - POST Create Users",
+              "fullTitle": "API Test for \"reqres.in\" Test - POST Create Users",
+              "timedOut": false,
+              "duration": 417,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const body = {\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n}\nconst response = await request(BASE_URL)\n    .post(\"users\")\n    .send(body);\nconst schemaPathPost = \"resources/post-object-schema.json\";\nconst jsonSchemaPost = JSON.parse(fs.readFileSync(schemaPathPost, 'utf8'))\nassert.jsonSchema(response.body, jsonSchemaPost);",
+              "err": {},
+              "uuid": "3fbdde48-8dec-4254-a42f-dfaac60859e1",
+              "parentUUID": "10a41b91-52b2-4d6d-b51b-32ed8c1e3150",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test - PUT Update Users",
+              "fullTitle": "API Test for \"reqres.in\" Test - PUT Update Users",
+              "timedOut": false,
+              "duration": 423,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const body = {\n    \"name\": \"morpheus\",\n    \"job\": \"zion resident\"\n}\nconst response = await request(BASE_URL)\n    .put(\"users/2\")\n    .send(body);\nconst schemaPathPut = \"resources/put-object-schema.json\";\nconst jsonSchemaPut = JSON.parse(fs.readFileSync(schemaPathPut, 'utf8'))\nassert.jsonSchema(response.body, jsonSchemaPut);",
+              "err": {},
+              "uuid": "ad9d88bf-0c34-4a78-ae9b-72472b0b74f0",
+              "parentUUID": "10a41b91-52b2-4d6d-b51b-32ed8c1e3150",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test - DELETE Certain Users",
+              "fullTitle": "API Test for \"reqres.in\" Test - DELETE Certain Users",
+              "timedOut": false,
+              "duration": 459,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(BASE_URL)\n            .delete(\"users/2\");\n        console.log(response.statusCode);\n        const schemaPathDelete = \"resources/delete-object-schema.json\";\n        const jsonSchemaDelete = JSON.parse(fs.readFileSync(schemaPathDelete, 'utf8'))\n        assert.jsonSchema(response.body, jsonSchemaDelete);",
+              "err": {},
+              "uuid": "47d95a60-a123-47bd-88de-7b060fcce3e5",
+              "parentUUID": "10a41b91-52b2-4d6d-b51b-32ed8c1e3150",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d6416e6-5b4d-4e6b-ab15-dfcb19abb0f2",
+            "3fbdde48-8dec-4254-a42f-dfaac60859e1",
+            "ad9d88bf-0c34-4a78-ae9b-72472b0b74f0",
+            "47d95a60-a123-47bd-88de-7b060fcce3e5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1784,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.7.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
